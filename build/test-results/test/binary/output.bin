@@ -14,7 +14,7 @@
     "id": 4999182513,
     "category": {
         "id": 1,
-        "name": "dog"
+        "name": "14721"
     },
     "name": "Morcego",
     "photoUrls": [
@@ -23,15 +23,15 @@
     "tags": [
 
         {
-            "id": 2021,
-            "name": "sta"
+            "id": 20210812,
+            "name": "data"
 
         }
     ],
     "status": "available"
 }
 HTTP/1.1 200 OK
-%Date: Thu, 12 Aug 2021 23:31:00 GMT
+%Date: Fri, 13 Aug 2021 00:20:50 GMT
  Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -44,7 +44,7 @@
     "id": 4999182513,
     "category": {
         "id": 1,
-        "name": "dog"
+        "name": "14721"
     },
     "name": "Morcego",
     "photoUrls": [
@@ -53,10 +53,53 @@
     "tags": [
 
         {
-            "id": 2021,
-            "name": "sta"
+            "id": 20210812,
+            "name": "data"
 
         }
     ],
     "status": "available"
 }
+Request method:	GET
+<Request URI:	https://petstore.swagger.io/v2/pet/4999182513
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+%Date: Fri, 13 Aug 2021 00:20:51 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 4999182513,
+    "category": {
+        "id": 1,
+        "name": "14721"
+    },
+    "name": "Morcego",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 20210812,
+            "name": "data"
+
+        }
+    ],
+    "status": "available"
+}
+O token é14721

@@ -16,20 +16,20 @@ import static org.hamcrest.Matchers.contains;
 // 3 - Classe
 public class Pet {
     // 3.1 - Atributos
-    String uri = "https://petstore.swagger.io/v2/pet"; // endere√ßo da entidade Pet
+    String uri = "https://petstore.swagger.io/v2/pet"; // endereÁo da entidade Pet
 
-    // 3.2 - M√©todos e Fun√ß√µes
+    // 3.2 - MÈtodos e FunÁıes
     public String lerJson(String caminhoJson) throws IOException {
         return new String(Files.readAllBytes(Paths.get(caminhoJson)));
     }
 
     // Incluir - Create - Post
-    @Test // identifica o metodo ou fun√ß√£o como um teste para o TestNG
+    @Test (priority = 1) // identifica o metodo ou funÁ„o como um teste para o TestNG
     public void incluirPet() throws IOException {
         String jsonBody = lerJson("db/pet1.json");
 
         // Sintaxe Gherkin
-        // Dado - Quando - Ent√£o
+        // Dado - Quando - Ent„o
         // Given - When - Then
 
         given() // dado
@@ -40,15 +40,41 @@ public class Pet {
         .when() // quando
                 .post(uri)
 
-        .then() // ent√£o
+        .then() // ent„o
                 .log().all()
                 .statusCode(200)
-                .body("name", is("Morcego"))  // resultado esperado ver se esse texto est√° no teste
+                .body("name", is("Morcego"))  // resultado esperado ver se esse texto est· no teste
                 .body("status", is("available"))
-                .body("category.name", is ("dog"))
-                .body("tags.name", contains("sta")) // [] colchetes dentro do pet1.json permite o uso de contains, pois colchetes significa que tem uma lista de tags
+                .body("category.name", is ("14721"))
+                .body("tags.name", contains("data")) // [] colchetes dentro do pet1.json permite o uso de contains, pois colchetes significa que tem uma lista de tags
         ;
 
+    }
+// consultar o pet
+    @Test (priority = 2) // mostrar que isso È um teste, aparecer "play" para rodar
+    public void consultarPet(){
+        String petId = "4999182513";
+
+        String token=
+        given()
+                .contentType("application/json")
+                .log().all()
+        .when()
+                .get(uri +"/"+ petId)
+        .then()
+                .log().all()
+                .statusCode(200)
+                .body("name", is("Morcego"))
+                .body("category.name", is ("14721"))
+                .body("status", is("available"))
+
+            .extract()
+                .path("category.name")
+
+                ;
+        System.out.println("O token È " + token)
+
+        ;
     }
 
 
