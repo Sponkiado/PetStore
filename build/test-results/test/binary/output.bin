@@ -31,7 +31,7 @@
     "status": "available"
 }
 HTTP/1.1 200 OK
-%Date: Fri, 13 Aug 2021 00:20:50 GMT
+%Date: Fri, 13 Aug 2021 01:02:19 GMT
  Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -73,7 +73,7 @@
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-%Date: Fri, 13 Aug 2021 00:20:51 GMT
+%Date: Fri, 13 Aug 2021 01:02:21 GMT
  Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -102,4 +102,93 @@
     ],
     "status": "available"
 }
-O token é14721
+O token é 14721
+Request method:	PUT
+1Request URI:	https://petstore.swagger.io/v2/pet
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 4999182513,
+    "category": {
+        "id": 1,
+        "name": "14721"
+    },
+    "name": "Morcego",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 20210812,
+            "name": "data"
+
+        }
+    ],
+    "status": "sold"
+}
+HTTP/1.1 200 OK
+%Date: Fri, 13 Aug 2021 01:02:22 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 4999182513,
+    "category": {
+        "id": 1,
+        "name": "14721"
+    },
+    "name": "Morcego",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+
+        {
+            "id": 20210812,
+            "name": "data"
+
+        }
+    ],
+    "status": "sold"
+}
+Request method:	DELETE
+<Request URI:	https://petstore.swagger.io/v2/pet/4999182513
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+%Date: Fri, 13 Aug 2021 01:02:23 GMT
+ Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+ Access-Control-Allow-Origin: *
+6Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+DAccess-Control-Allow-Headers: Content-Type, api_key, Authorization
+ Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "4999182513"
+}

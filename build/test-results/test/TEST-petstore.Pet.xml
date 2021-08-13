@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="petstore.Pet" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-08-13T00:20:44" hostname="CTNDELLFPR5WF3" time="4.045">
+<testsuite name="petstore.Pet" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-08-13T01:02:14" hostname="CTNDELLFPR5WF3" time="6.049">
   <properties/>
-  <testcase name="incluirPet" classname="petstore.Pet" time="2.762"/>
-  <testcase name="consultarPet" classname="petstore.Pet" time="1.28"/>
+  <testcase name="incluirPet" classname="petstore.Pet" time="2.949"/>
+  <testcase name="consultarPet" classname="petstore.Pet" time="1.085"/>
+  <testcase name="alterarPet" classname="petstore.Pet" time="1.07"/>
+  <testcase name="excluirPet" classname="petstore.Pet" time="0.94"/>
   <system-out><![CDATA[Request method:	POST
 Request URI:	https://petstore.swagger.io/v2/pet
 Proxy:			<none>
@@ -34,7 +36,7 @@ Body:
     "status": "available"
 }
 HTTP/1.1 200 OK
-Date: Fri, 13 Aug 2021 00:20:50 GMT
+Date: Fri, 13 Aug 2021 01:02:19 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -74,7 +76,7 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Fri, 13 Aug 2021 00:20:51 GMT
+Date: Fri, 13 Aug 2021 01:02:21 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -101,7 +103,92 @@ Server: Jetty(9.2.9.v20150224)
     ],
     "status": "available"
 }
-O token é14721
+O token é 14721
+Request method:	PUT
+Request URI:	https://petstore.swagger.io/v2/pet
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "id": 4999182513,
+    "category": {
+        "id": 1,
+        "name": "14721"
+    },
+    "name": "Morcego",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 20210812,
+            "name": "data"
+        }
+    ],
+    "status": "sold"
+}
+HTTP/1.1 200 OK
+Date: Fri, 13 Aug 2021 01:02:22 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "id": 4999182513,
+    "category": {
+        "id": 1,
+        "name": "14721"
+    },
+    "name": "Morcego",
+    "photoUrls": [
+        "string"
+    ],
+    "tags": [
+        {
+            "id": 20210812,
+            "name": "data"
+        }
+    ],
+    "status": "sold"
+}
+Request method:	DELETE
+Request URI:	https://petstore.swagger.io/v2/pet/4999182513
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Fri, 13 Aug 2021 01:02:23 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+Server: Jetty(9.2.9.v20150224)
+
+{
+    "code": 200,
+    "type": "unknown",
+    "message": "4999182513"
+}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
